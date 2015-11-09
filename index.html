@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp">
+<head>
+	<meta charset="UTF-8">
+	<title>WeatherApp</title>
+	<link rel="stylesheet" href="assets/styles/reset.css">
+	<link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+	<div class="container">
+
+	<nav>
+		<a ui-sref="home">Home</a>
+		<a ui-sref="forecast">Forecast</a>
+		<a ui-sref="compare">Compare</a>
+	</nav>
+	
+	<ui-view></ui-view>
+
+	</div> <!-- container -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="app/app.routes.js"></script>
+	<script src="app/home/homeCtrl.js"></script>
+	<script src="app/forecast/forecastCtrl.js"></script>
+	<script src="app/compare/compareCtrl.js"></script>
+	<script src="app/compare/compareService.js"></script>
+	<script src="app/services/lookupService.js"></script>
+	<script src="app/services/weatherService.js"></script>
+</body>
+</html>
+
+
