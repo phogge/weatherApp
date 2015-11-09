@@ -1,3 +1,11 @@
 <div ng-repeat="result in refineObj">
-	<li>{{result.city}}, {{result.state}}, {{result.country}}</li>
+	<li>
+		<a ui-sref="forecast({param1: result.state, param2: result.city})">
+		{{result.city}}, {{result.state}}, {{result.country}}
+		</a>
+	</li>
 </div>
+
+
+
+
