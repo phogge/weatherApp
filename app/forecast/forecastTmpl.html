@@ -1,5 +1,7 @@
 <div ng-repeat="period in weather" class="weatherDay">
-	<img src="{{period.icon_url}}">
-	<h2>{{period.title}}</h2>
-	<p>{{period.fcttext}}</p>
+	<div class="dayHeader">{{period.date.weekday}}</div>
+	<i class="wi wi-wu-{{period.icon}} icon"></i>
+	<div class="conditions">{{period.conditions}}</div>
+	<div class="HiLo">High: <div class="highTemp">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
+	<div class="HiLo">Low: <div class="lowTemp">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
 </div>

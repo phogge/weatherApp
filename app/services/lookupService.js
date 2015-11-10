@@ -2,6 +2,7 @@ angular.module('weatherApp').service('lookupService', function($http, $q){
 
 	this.lookup = function(searchQuery) {
 		var deferred = $q.defer();
+		
 
 		$http({
 			method: 'GET',

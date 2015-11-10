@@ -2,6 +2,7 @@ angular.module('weatherApp')
 	.controller('homeCtrl', function($scope, lookupService, $state, $stateParams){
 
 	$scope.search = function(searchQuery) {
+
 		lookupService.lookup(searchQuery).then(function(results){
 			if (results.code === 'weather') {
 				$state.go('forecast', {param1: results.state, param2: results.city});
@@ -13,6 +14,7 @@ angular.module('weatherApp')
 			}
 
 		});
+		$scope.searchQuery = '';
 	};
 });
 

@@ -1,11 +1,13 @@
-<div ng-repeat="result in refineObj">
-	<li>
-		<a ui-sref="forecast({param1: result.state, param2: result.city})">
-		{{result.city}}, {{result.state}}, {{result.country}}
-		</a>
-	</li>
+<div class="refineResults">
+<p>We have narrowed your search to the following results. Select a city below, or enter a new search.
+	<div ng-repeat="result in refineObj">
+		<li>
+			<a ui-sref="forecast({param1: result.state, param2: result.city})">
+				{{result.city}}, {{result.state}}, {{result.country}}
+			</a>
+		</
+	</div>
 </div>
-
 
 
 

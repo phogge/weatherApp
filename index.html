@@ -4,21 +4,44 @@
 	<meta charset="UTF-8">
 	<title>WeatherApp</title>
 	<link rel="stylesheet" href="assets/styles/reset.css">
-	<link rel="stylesheet" href="assets/styles/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/styles/weather-icons.min.css">
+	<link rel="stylesheet" href="assets/font-awesome-4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/styles/styles.css"> 
+	
 </head>
 <body>
 	<div class="container">
+	<div class="wrapper">
 
-	<nav>
-		<a ui-sref="home">Home</a>
-		<a ui-sref="forecast">Forecast</a>
-		<a ui-sref="compare">Compare</a>
-	</nav>
 	
-	<ui-view></ui-view>
+	
 
+	<header>
+		<div class="logo">
+			<i class="wi wi-stars"></i>
+			<h1>WeatherView</h1><span class="logoCom">.com</span>
+		</div>
+
+		<nav>
+			<a ui-sref="home"><i class="fa fa-home"></i>Home</a>
+			<a ui-sref="forecast"><i class="fa fa-globe"></i>Forecast</a>
+			<a ui-sref="compare"><i class="fa fa-clone"></i>Compare</a>
+		</nav>
+	</header>
+
+
+	<ui-view></ui-view>
+	
+	<div class="push"></div>
+	</div> <!-- wrapper -->
 	</div> <!-- container -->
 
+	<footer>
+		<div>
+			<p>WeatherView.com&#8482; &copy; 2015</p>
+		</div>
+	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>

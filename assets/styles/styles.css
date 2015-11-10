@@ -1,22 +1,244 @@
+html, body {
+	height: 100%;
+}
+
+html {
+	background-color: #111111;
+	position: relative;
+}
+
+html::after {
+  content: "";
+  background: url('/assets/images/rain_drops.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
 body {
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 300;
+   /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+   font-family: 'Lato', sans-serif;
+   font-weight: 100;
+   color: #DDDDDD;
 }
 
 .container {
-	width: 800px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -100px;   /* Match to footer height */
+	text-align: center;
+}
+.wrapper {
+	/*padding-top: 50px;*/
+}
+
+
+header {
+	position: relative;
+	/*margin: 30px auto;*/
+	/*width: 80%;*/
+	height: 150px;
+	background-color: rgba(0,0,0,0.6);
+	/*border-radius: 15px;*/
+}
+
+.logo {
+	position: relative;
+	top: 15px;
+	width: 300px;
+	height: 75px;
 	margin: 0 auto;
 }
+.logo h1 {
+	position: relative;
+	top: 28px;
+	left: -20px;
+	font-size: 2em;
+	font-weight: 400;
+	z-index: 100;
+}
+.logoCom {
+	position: absolute;
+	font-size: 1.2em;
+	font-weight: 300;
+	color: #59B4E1;
+	right: 32px;
+	bottom: 17px;
+}
+.logo i {
+	position: absolute;
+	font-size: 3em;
+	color: #59B4E1;
+	z-index: 10;
+	left: 0;
+	top: 0;
+}
+
+nav {
+ 	margin-top: 30px;
+ 	font-size: 1.3em;
+}
+
+nav i {
+	margin-right: 9px;
+}
+
+nav a {
+	color: white;
+	padding: 0 40px;
+}
+
+nav a:hover {
+	color: #59B4E1;
+}
+
+
+footer, .push {
+	height: 100px;   /* Match to container margin */
+}
+
+footer {
+	position: relative;
+}
+
+footer div {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+footer p {
+	font-size: 1.2em;
+}
+
+/* ---- homeTmpl.html ---- */
+
+div.search {
+	position: relative;
+	margin-top: 50px;
+}
+
+.search input {
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+	opacity: 0.8;
+	padding-left: 10px;
+	font-size: 1.1em;
+	border-style: none;
+}
+
+.search button {
+	position: relative;
+	left: -4px;
+	height: 42px;
+	width: 42px;
+	top: 4px;
+	font-size: 1.8em;
+	border-style: none;
+	border-left: 2px solid gray;
+	background-color: #DDDDDD;
+}
+
+.search button:hover {
+	background-color: #59B4E1;
+}
+
+/* ---- refineSearchTmpl.html ---- */
+
+.refineResults {
+	margin-top: 25px;
+	font-weight: 400;
+}
+
+.refineResults > p {
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.refineResults li {
+	list-style-type: none;
+	margin: 10px 0;
+}
+
+.refineResults a {
+	color: white;
+	font-size: 1.1em;
+}
+
+.refineResults a:hover {
+	color: #59B4E1;
+}
+
+
+
+
+
+/* ---- forecastTmpl.html ---- */
+
+i {
+	display: inline-block;
+}
+
+.wi { font-size: 4em; }
+
+.dayHeader { 
+	float: left;
+	font-size: 2em;
+	width: 300px;
+}
+
+.icon { 
+	float: left;
+}
+
+.conditions { 
+	float: left;
+}
+
+.HiLo { 
+	float: left;
+	text-align: left;
+}
+
+.HiLo span { float: left; width: 400px;}
+
+
+.highTemp { color: #E24952; font-size: 2.5em; font-weight: 600;}
+.lowTemp { color: #4B67F4; font-size: 2.5em;  font-weight: 600;}
+.wi-fahrenheit {
+	font-size: 1em;
+}
+
+
+.weatherDay div {
+	margin: 0 20px;
+}
+
+
+
 
 .weatherDay {
 	position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 15px 25px;
-	width: 800px;
-	background-color: #EEEEEE;
-	border-radius: 8px;
-	border: 1px solid #999999;
+	/*width: 800px;*/
+	height: 80px;
+	background-color: rgba(0,0,0,0.5);
+	/*border-radius: 8px;*/
+	/*border: 1px solid #999999;*/
 }
 
 .weatherDay img {
