@@ -1,0 +1,40 @@
+body {
+   /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.weatherDay {
+	position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px 25px;
+	width: 800px;
+	background-color: #EEEEEE;
+	border-radius: 8px;
+	border: 1px solid #999999;
+}
+
+.weatherDay img {
+	float: left;
+	height: 80px;
+	width: 80px;
+}
+
+.weatherDay h2 {
+	float: right;
+	padding-top: 10px;
+	font-size: 2em;
+}
+
+.weatherDay p {
+	clear: both;
+	font-weight: 300;
+	text-align: center;
+	padding: 15px 100px;
+}

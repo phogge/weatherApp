@@ -4,6 +4,8 @@ angular.module('weatherApp')
 	var state = $stateParams.param1,
 		city = $stateParams.param2;
 
+	$scope.city = city;
+	$scope.state = state;
 
 	weatherService.getWeather(state, city).then(function(results){
 		$scope.weather = results;

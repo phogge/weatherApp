@@ -1,6 +1,16 @@
-<div class="search">
-	<input ng-model="searchQuery" placeholder="City by city/state, zip, or airport code ..."></input> 
-	<button ng-click="search(searchQuery)"><i class="fa fa-search"></i></button>
-</div>
+<search-box info="forecast" search="search"></search-box>
 
-<ui-view></ui-view>
+<!-- <ui-view></ui-view> -->
+
+<modal-box show='modalShown' width='50%' height='50%'>
+  	<div class="refineResults">
+		<p>We have narrowed your search to the following results.<br>Select a city below, or enter a new search.</p>
+		<div ng-repeat="result in refineObj">
+			<li>
+				<a ui-sref="forecast({param1: result.state, param2: result.city})">
+					{{result.city}}, {{result.state}}, {{result.country}}
+				</a>
+			</li>
+		</div>
+	</div>
+</modal-box>
