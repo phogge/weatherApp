@@ -1,11 +1,17 @@
-<h3>Forecast for: {{city}}, {{state}}</h3>
+<h3>Forecast for: {{weather.location.city}}, {{weather.location.state}}</h3>
 
 <div ng-repeat="period in weather" class="weatherDay">
-	<div class="dayHeader">{{period.date.weekday}}</div>
-	<i class="wi wi-wu-{{period.icon}} icon"></i>
-	<div class="conditions">{{period.conditions}}</div>
-	<div class="HiLo">High: <div class="highTemp">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
-	<div class="HiLo">Low: <div class="lowTemp">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
+	<div class="dayWrapper">
+		<div class="dayHeader">{{period.date.weekday}}</div>
+
+		<div class="dayTemps">
+			High: <span class="temp high">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+			Low: <span class="temp low">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+		</div>
+
+		<div class="dayConditions">{{period.conditions}}</div>
+
+		<div class="dayIcon"><i class="wi wi-wu-{{period.icon}}"></i></div>
+	</div>
 </div>
 
-<div style="height: 2000px;"></div>

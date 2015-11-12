@@ -1,37 +1,62 @@
 <div class="tribox">
 	<search-box ng-show="One" info="compareOne" search="search"></search-box>
-	<div ng-hide="One" ng-click="clearCompare('One')"><i class="fa fa-times-circle"></i></div>
+	<div class="close" ng-hide="One" ng-click="clearCompare('One')"><i class="fa fa-times-circle"></i></div>
 
-	<div ng-repeat="period in compareOne.weather">
-		<div>{{period.date.weekday}}</div>
-		<i class="wi wi-wu-{{period.icon}} icon"></i>
-		<div>{{period.conditions}}</div>
-		<div>High: <div>{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
-		<div>Low: <div>{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
+	<div class="compareCity">{{compareOne.weather.location.city}} {{compareOne.weather.location.state}}</div>
+	
+	<div class="dayContainer" ng-repeat="period in compareOne.weather">
+		<div class="weekday">{{period.date.weekday}}</div>
+		<div class="cond">
+			{{period.conditions}} 
+			<div class="icon"><i class="wi wi-wu-{{period.icon}}"></i></div>
+		</div>
+		<div class="temps">
+			High: <span class="highTemps">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></span><br>
+			Low: <span class="lowTemps">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+		</div>
+		<div class="clear"></div>
 	</div>
 </div>
+
 
 <div class="tribox">
 	<search-box ng-show="Two" info="compareTwo" search="search"></search-box>
+	<div class="close" ng-hide="Two" ng-click="clearCompare('Two')"><i class="fa fa-times-circle"></i></div>
 
-	<div ng-repeat="period in compareTwo.weather">
-		<div>{{period.date.weekday}}</div>
-		<i class="wi wi-wu-{{period.icon}} icon"></i>
-		<div>{{period.conditions}}</div>
-		<div>High: <div>{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
-		<div>Low: <div>{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
+	<div class="compareCity">{{compareTwo.weather.location.city}} {{compareTwo.weather.location.state}}</div>
+	
+	<div class="dayContainer" ng-repeat="period in compareTwo.weather">
+		<div class="weekday">{{period.date.weekday}}</div>
+		<div class="cond">
+			{{period.conditions}} 
+			<div class="icon"><i class="wi wi-wu-{{period.icon}}"></i></div>
+		</div>
+		<div class="temps">
+			High: <span class="highTemps">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></span><br>
+			Low: <span class="lowTemps">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+		</div>
+		<div class="clear"></div>
 	</div>
 </div>
 
-<div class="tribox">
-	<search-box  ng-show="Three"info="compareThree" search="search"></search-box>
 
-	<div ng-repeat="period in compareThree.weather">
-		<div>{{period.date.weekday}}</div>
-		<i class="wi wi-wu-{{period.icon}} icon"></i>
-		<div>{{period.conditions}}</div>
-		<div>High: <div>{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
-		<div>Low: <div>{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></div></div>
+<div class="tribox">
+	<search-box ng-show="Three" info="compareThree" search="search"></search-box>
+	<div class="close" ng-hide="Three" ng-click="clearCompare('Three')"><i class="fa fa-times-circle"></i></div>
+
+	<div class="compareCity">{{compareThree.weather.location.city}} {{compareThree.weather.location.state}}</div>
+	
+	<div class="dayContainer" ng-repeat="period in compareThree.weather">
+		<div class="weekday">{{period.date.weekday}}</div>
+		<div class="cond">
+			{{period.conditions}} 
+			<div class="icon"><i class="wi wi-wu-{{period.icon}}"></i></div>
+		</div>
+		<div class="temps">
+			High: <span class="highTemps">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></span><br>
+			Low: <span class="lowTemps">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+		</div>
+		<div class="clear"></div>
 	</div>
 </div>
 

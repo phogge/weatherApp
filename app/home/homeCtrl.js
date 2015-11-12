@@ -6,8 +6,8 @@ angular.module('weatherApp')
 	$scope.modalShown = false;
   	$scope.toggleModal = function() {
     	$scope.modalShown = !$scope.modalShown;
+    	$scope.forecast.searchQuery = '';
   	};
-
 
 	$scope.search = function(searchQuery) {
 		lookupService.lookup(searchQuery).then(function(results){
@@ -16,7 +16,6 @@ angular.module('weatherApp')
 			} else if (results.code === 'refine') {
 				$scope.refineObj = results.refine;
 				$scope.toggleModal();
-				//$state.go('home.refine');
 			}
 		});
 		$scope.searchQuery = '';

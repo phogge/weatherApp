@@ -7,8 +7,12 @@ angular.module('weatherApp').service('weatherService', function($http, $q){
 			method: 'GET',
 			url: 'http://api.wunderground.com/api/b69c4eacca9cd389/forecast/q/' + state + '/' + city + '.json'
 		}).then(function(response) {
-			//return deferred.resolve(response.data.forecast.txt_forecast.forecastday);
-			return deferred.resolve(response.data.forecast.simpleforecast.forecastday);
+			// response.data.forecast.txt_forecast.forecastday
+			var weatherObj = response.data.forecast.simpleforecast.forecastday;
+
+			weatherObj.location = {state, city};
+
+			return deferred.resolve(weatherObj);
 		});
 
 		return deferred.promise;

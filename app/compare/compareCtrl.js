@@ -10,9 +10,9 @@ angular.module('weatherApp')
 	$scope.Two = true;
 	$scope.Three = true;
 
-  	$scope.compareOne = { searchQuery: '', searchPlaceholder: '1st city to compare...', source: 'compareOne', weather: {}};
-  	$scope.compareTwo = { searchQuery: '', searchPlaceholder: '2nd city to compare...', source: 'compareTwo', weather: {}};
-  	$scope.compareThree = { searchQuery: '', searchPlaceholder: '3rd city to compare...', source: 'compareThree', weather: {}};
+  	$scope.compareOne = { searchQuery: '', searchPlaceholder: 'First city to compare ...', source: 'compareOne', weather: {}};
+  	$scope.compareTwo = { searchQuery: '', searchPlaceholder: 'Second city to compare ...', source: 'compareTwo', weather: {}};
+  	$scope.compareThree = { searchQuery: '', searchPlaceholder: 'Third city to compare ...', source: 'compareThree', weather: {}};
 
 	$scope.search = function(searchQuery, source) {
 		lookupService.lookup(searchQuery).then(function(lookupResults){
@@ -41,9 +41,5 @@ angular.module('weatherApp')
 		$scope[a] = true;
 		$scope[compareToEmpty].weather = {};
 	};
-
-
-
-
 
 });

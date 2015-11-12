@@ -6,11 +6,6 @@ $stateProvider
 		controller: 'homeCtrl',
 		templateUrl: '/app/home/homeTmpl.html'
 
-	// }).state('home.refine', {
-	// 	url: '/refine-search',
-	// 	controller: 'homeCtrl',
-	// 	templateUrl: '/app/home/refineSearchTmpl.html'
-
 	}).state('forecast', {
 		url: '/forecast/:param1/:param2',
 		controller: 'forecastCtrl',

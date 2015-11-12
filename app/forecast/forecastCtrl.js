@@ -11,5 +11,4 @@ angular.module('weatherApp')
 		$scope.weather = results;
 	});
 
-
-})
+});
