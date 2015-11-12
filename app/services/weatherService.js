@@ -11,7 +11,7 @@ angular.module('weatherApp').service('weatherService', function($http, $q){
 			// response.data.forecast.simpleforecast.forecastday;
 			var weatherObj = response.data.forecast;
 
-				THIS IS VERSION '2.0'
+
 
 			weatherObj.location = {state, city};
 

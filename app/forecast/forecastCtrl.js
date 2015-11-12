@@ -8,7 +8,10 @@ angular.module('weatherApp')
 	$scope.state = state;
 
 	weatherService.getWeather(state, city).then(function(results){
-		$scope.weather = results;
+		$scope.weather = results.simpleforecast.forecastday;
+
+
+
 	});
 
 });
