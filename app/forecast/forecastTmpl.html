@@ -1,17 +1,46 @@
-<h3>Forecast for: {{weather.location.city}}, {{weather.location.state}}</h3>
+<h3>Forecast for: {{city}} {{state}}</h3>
 
 <div ng-repeat="period in weather" class="weatherDay">
 	<div class="dayWrapper">
 		<div class="dayHeader">{{period.date.weekday}}</div>
-
 		<div class="dayTemps">
 			High: <span class="temp high">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
 			Low: <span class="temp low">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
 		</div>
-
 		<div class="dayConditions">{{period.conditions}}</div>
-
 		<div class="dayIcon"><i class="wi wi-wu-{{period.icon}}"></i></div>
+
+		
+		
+		<div style="text-align: left; font-size: 1.2em;">
+
+			Wind: {{period.avewind.mph}} MPH - {{period.avewind.dir}}
+				<i class="wi wi-wind from-{{period.avewind.degrees}}-deg"></i>
+			<br>
+			Chance of Precip. {{period.pop}} %
+
+			<!-- Detailed Forecast -->
+			<div ng-repeat="detail in details | filter: period.date.weekday">
+				{{detail.title}} : 
+				{{detail.fcttext}}
+			</div>		
+
+
+		</div>
+
+
+
 	</div>
-</div>
+
+
+
+
+
+	
+
+
+
+
+
+
 

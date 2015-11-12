@@ -9,8 +9,9 @@ angular.module('weatherApp')
 
 	weatherService.getWeather(state, city).then(function(results){
 		$scope.weather = results.simpleforecast.forecastday;
+		$scope.details = results.txt_forecast.forecastday;
 
-
+	
 
 	});
 
