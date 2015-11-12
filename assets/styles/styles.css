@@ -9,7 +9,7 @@ html {
 
 html::after {
   content: "";
-  background: url('/assets/images/rain_drops.jpg') repeat center center fixed; 
+  background: url('/assets/images/rain_drops.jpg'); 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -188,6 +188,15 @@ div.search {
 
 /* ---- forecastTmpl.html ---- */
 
+.searchTitle {
+	padding: 5px;
+	background-color: #58B1DE;
+	color: #111111;
+	border-radius: 0 0 8px 8px;
+	width: 60%;
+	margin: 0 auto;
+}
+
 h3 {
 	font-size: 1.5em;
 	font-weight: 500;
@@ -204,19 +213,20 @@ div.weatherDay {
 	width: 60%;
 	margin: 0 auto;
 	padding-top: 15px;
+	text-align: left;
 }
 
 .dayHeader {
-	width: 25%;
+	width: 30%;
 	float: left;
 	font-size: 2em;
 	font-weight: 400;
 }
 
 .dayTemps {
-	width: 25%;
+	width: 30%;
 	float: left;
-	font-size: 2em;
+	font-size: 1.6em;
 	font-weight: 100;
 }
 
@@ -225,16 +235,19 @@ div.weatherDay {
 .low { color: #58B1DE; }
 
 .dayConditions {
-	width: 25%;
+	width: 28%;
 	float: left;
-	font-size: 2em;
+	font-size: 1.5em;
+	padding-right: 2%;
 	text-align: right;
 }
 
 .dayIcon{
-	width: 25%;
+	width: 10%;
 	float: left;
 	font-size: 4em;
+	padding-top: 10px;
+	text-align: center;
 }
 
 

@@ -11,8 +11,6 @@ angular.module('weatherApp')
 		$scope.weather = results.simpleforecast.forecastday;
 		$scope.details = results.txt_forecast.forecastday;
 
-	
-
 	});
 
 });

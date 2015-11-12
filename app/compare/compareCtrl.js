@@ -29,8 +29,8 @@ angular.module('weatherApp')
 
 	$scope.weatherForCompare = function(state, city, source) {
 		weatherService.getWeather(state, city).then(function(results){
-			$scope[source].weather = results;
-
+			$scope[source].weather = results.simpleforecast.forecastday;
+			
 			var searchToHide = source.substr(7);
 			$scope[searchToHide] = false;
 		});

@@ -1,31 +1,50 @@
-<h3>Forecast for: {{city}} {{state}}</h3>
+<div class="searchTitle">
+	<h3>Forecast for: {{city}} {{state}}</h3>
+</div>
 
 <div ng-repeat="period in weather" class="weatherDay">
 	<div class="dayWrapper">
-		<div class="dayHeader">{{period.date.weekday}}</div>
-		<div class="dayTemps">
-			High: <span class="temp high">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
-			Low: <span class="temp low">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+		<div class="dayHeader">{{period.date.weekday}}
+
+		<div style="text-align: left; font-size:0.5em; margin-top: 5px;">
+		<div style="vertical-align: middle; padding-bottom: 9px;"> 
+		Wind : {{period.avewind.mph}} MPH - {{period.avewind.dir}}
+		<i style="font-size: 2em; margin: 0 20px 0 5px;" class="wi wi-wind from-{{period.avewind.degrees}}-deg"></i>
 		</div>
+		Chance of Precip : {{period.pop}} %
+		</div>
+
+		</div>
+
+		<div class="dayTemps">
+			High:<span style="padding-right: 5px" class="temp high">{{period.high.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+			Low:<span class="temp low">{{period.low.fahrenheit}} <i class="wi wi-fahrenheit"></i></span>
+		</div>
+		
 		<div class="dayConditions">{{period.conditions}}</div>
 		<div class="dayIcon"><i class="wi wi-wu-{{period.icon}}"></i></div>
-
 		
-		
-		<div style="text-align: left; font-size: 1.2em;">
 
-			Wind: {{period.avewind.mph}} MPH - {{period.avewind.dir}}
-				<i class="wi wi-wind from-{{period.avewind.degrees}}-deg"></i>
-			<br>
-			Chance of Precip. {{period.pop}} %
 
+		<div class="clear" ng-click="details = !details" style="padding: 10px; text-align: center;">
+			<i ng-show="details" class="fa fa-plus-square-o"></i>
+			<i ng-show="!details" class="fa fa-minus-square-o"></i>
+			<span ng-show="details">Show </span>
+			<span ng-show="!details">Hide </span>
+			Detailed Forecast
+		</div>
+		 
+
+
+		<div ng-show="!details" style="text-align: left; font-size: 1.1em; font-weight: 300; clear: both; padding: 0 0 15px 40px;">
 			<!-- Detailed Forecast -->
-			<div ng-repeat="detail in details | filter: period.date.weekday">
-				{{detail.title}} : 
-				{{detail.fcttext}}
+			<hr style="border: none; height: 1px; background-color: #999999; width: 75%;">
+
+			<div style="padding: 10px 0;" ng-repeat="detail in details | filter: period.date.weekday">
+				<div style="width: 20%; float: left;">{{detail.title}} : </div>
+				<div style="width: 80%; float: left;">{{detail.fcttext}}</div>
+				<div class="clear"></div>
 			</div>		
-
-
 		</div>
 
 
