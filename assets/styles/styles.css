@@ -158,6 +158,40 @@ div.search {
 	background-color: #59B4E1;
 }
 
+
+.searchByIP {
+	margin: 0 auto;
+	width: 500px;
+	margin-top: 125px;
+	font-size: 1.8em;
+	font-weight: 300;
+	box-shadow: 0 0 30px rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 8px;
+	padding: 20px;
+
+}
+
+.searchByIP div {
+	color: #444444;
+	margin: 0 auto;
+	margin-top: 15px;
+	width: 90px;
+	height: 40px;
+	font-size: 1.2;
+	background-color: #DDDDDD;
+	border-radius: 8px;
+	padding-top: 10px;
+}
+
+.searchByIP div:hover {
+	background-color: #59B4E1;
+	color: white;
+}
+
+
+
+
 /* ---- refineSearchTmpl.html ---- */
 
 .refineResults {

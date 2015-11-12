@@ -9,6 +9,7 @@ angular.module('weatherApp')
     	$scope.forecast.searchQuery = '';
   	};
 
+
 	$scope.search = function(searchQuery) {
 		lookupService.lookup(searchQuery).then(function(results){
 			if (results.code === 'weather') {
@@ -20,6 +21,8 @@ angular.module('weatherApp')
 		});
 		$scope.searchQuery = '';
 	};
+
+
 
 });
 
