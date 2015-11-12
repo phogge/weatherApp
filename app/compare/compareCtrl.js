@@ -27,19 +27,26 @@ angular.module('weatherApp')
 		$scope[source].searchQuery = '';
 	};
 
+
 	$scope.weatherForCompare = function(state, city, source) {
-		weatherService.getWeather(state, city).then(function(results){
+		weatherService.getWeather(state, city).then(function(results) {
+
 			$scope[source].weather = results.simpleforecast.forecastday;
-			
+			$scope[source].city = results.searchlocation.city;
+			$scope[source].state = results.searchlocation.state;
+
 			var searchToHide = source.substr(7);
 			$scope[searchToHide] = false;
 		});
 	};
 
+
 	$scope.clearCompare = function(a) {
 		var compareToEmpty = 'compare' + a;
 		$scope[a] = true;
 		$scope[compareToEmpty].weather = {};
+		$scope[compareToEmpty].city = '';
+		$scope[compareToEmpty].state = '';
 	};
 
 });

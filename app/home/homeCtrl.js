@@ -14,6 +14,7 @@ angular.module('weatherApp')
 		lookupService.lookup(searchQuery).then(function(results){
 			if (results.code === 'weather') {
 				$state.go('forecast', {param1: results.state, param2: results.city});
+				
 			} else if (results.code === 'refine') {
 				$scope.refineObj = results.refine;
 				$scope.toggleModal();
