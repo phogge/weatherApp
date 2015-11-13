@@ -9,7 +9,7 @@ html {
 
 html::after {
   content: "";
-  background: url('http://tberry30.github.io/weatherApp/app/assets/images/rain_drops.jpg'); 
+  background: url('http://tberry30.github.io/weatherApp/assets/images/rain_drops.jpg'); 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
